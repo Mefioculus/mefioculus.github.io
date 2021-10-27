@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Четвертое занятие</title>
+        <!-- Подключение стороннего шрифта -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bellota+Text:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        html {
+            background-color: aliceblue;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .animated {
+            /* background-color: aliceblue; */
+            transition: background-color 0.5s;
+
+        }
+
+        .animated:hover {
+            background-color: rgb(206, 227, 245);
+        }
+
+        h1, h2 {
+            padding: 8px;
+            border-radius: 6px;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        p {
+            font-family: 'Bellota Text', cursive;
+            border-radius: 6px;
+            padding: 6px;
+        }
+
+        .picktogram {
+            height: 20px;
+            width: auto;
+        }
+
+        .linkContainer {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            gap: 8px;
+        }
+
+        .menu {
+            position: fixed;
+            left: 5px;
+            top: 2px;
+            width: 200px;
+
+        }
+
+        .menu_links {
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+        }
+
+    </style>
+    <body>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a class="menu_links" href=#introduction>Вводные</a>
+                </li>
+                <li>
+                    <a class="menu_links" href=#materials>Материалы</a>
+                </li>
+                <li>
+                    <a class="menu_links" href=#main_section>Коротко обо всем</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h1 id="introduction" class="animated">Вводные</h1>
+            <p  class="animated">
+                На данном занятии мы попробуем понять, что такое git и для чего он нужен.
+                Так же мы попробуем завести учетку на сайте github для того, чтобы захостить на нем свои работы.
+            </p>
+    
+    
+            <h2 id="materials" class="animated">Материалы, используемые в данном уроке</h2>
+            <ul>
+                <li class="animated">
+                    <!-- Ссылка на github -->
+                    <a href="https://github.com/">
+                        <div class="linkContainer">
+                            <img class="picktogram" src="https://cdn-icons-png.flaticon.com/128/270/270798.png">
+                            github.com
+                        </div>
+                    </a>
+                </li>
+                <!-- Ссылка на гайд по созданию учетной записи -->
+                <li class="animated">
+                    <a href="https://ru.hexlet.io/courses/html/lessons/github/theory_unit">
+                        <div class="linkContainer">
+                            <img class="picktogram" src="https://cdn-icons-png.flaticon.com/128/1705/1705243.png">
+                            Создание репозитория с сайтом
+                        </div>
+                    </a>
+                </li>
+                <!-- Мой сайт с лекциями -->
+                <li class="animated">
+                    <a href="https://mefioculus.github.io/">
+                        <div class="linkContainer">
+                            <img class="picktogram" src="https://cdn-icons-png.flaticon.com/128/62/62903.png">
+                            Мой сайт с материалами занятий
+                        </div>
+                    </a>
+                </li>
+            </ul>
+    
+            <h1 id="main_section" class="animated">Коротко про все темы:</h1>
+    
+            <h2 id="about_git" class="animated">О git</h2>
+            <p  class="animated">
+                Fill
+            </p>
+    
+            <h2 id="how_to" class="animated">Создание учетной записи и репозитория</h2>
+            <p  class="animated">
+                Fill
+            </p>
+    
+            <h2 id="using_git" class="animated">Использование Git для написания кода</h2>
+            <p  class="animated">
+                Fill
+            </p>
+        </div>
+    </body>
+</html>
