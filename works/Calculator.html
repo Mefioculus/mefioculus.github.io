@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Калькулятор
+        </title>
+        <style>
+            button {
+                background-color: orange;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                margin: 2px;
+                font-size: 20px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color:rgb(117, 76, 34);
+            }
+
+            input {
+                width: 176px;
+                height: 40px;
+                border-radius: 20px;
+                margin: 2px;
+                font-size: 20px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color:rgb(117, 76, 34);
+                text-align: right;
+
+
+            }
+
+            #outer {
+                border: solid;
+                width: 190px;
+                border-width: 2px;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: khaki;
+                border-color: rgb(107, 69, 32);
+            }
+
+        </style>
+        <script>
+            let a = null;
+            let b = null;
+            let operator = null;
+
+            // Функция для ввода цифр
+            function buttonClick(number) {
+                let label = document.querySelector('#label');
+                previosValue = label.getAttribute('value');
+                label.setAttribute('value', previosValue + number);
+            }
+
+            // Функция для выбора операций
+            function buttonOperation(operation) {
+                if (operator == null) {
+                    operator = operation;
+                    previosValue = document.querySelector('#label').getAttribute('value');
+                    document.querySelector('#label').setAttribute('value', previosValue + operation);
+                }
+
+            }
+
+            // Кнопка очистки результатов
+            function buttonClear() {
+                a = null;
+                b = null;
+                operator = null;
+                document.querySelector('#label').setAttribute('value', '');
+            }
+
+            // Кнопка очистки результатов после вычисления
+            function clearAfterEqual() {
+                a = null;
+                b = null;
+                operator = null;
+            }
+
+            // Действия, которые происходят при нажатии на вычисление
+            function buttonEqual() {
+                if (operator != null) {
+                    splittingLabelText();
+                    labelInput = document.querySelector('#label');
+                    switch (operator) {
+                        case " + ":
+                            labelInput.setAttribute('value', a + b);
+                            break;
+                        case " - ":
+                            labelInput.setAttribute('value', a - b);
+                            break;
+                        case " * ":
+                            labelInput.setAttribute('value', a * b);
+                            break;
+                        case " / ":
+                            labelInput.setAttribute('value', a / b);
+
+                            break;
+                    }
+                    clearAfterEqual();
+                }
+            }
+
+            // Функция для получения из текстового поля значений a и b
+            function splittingLabelText() {
+                operands = document.querySelector('#label').getAttribute('value').split(operator);
+                a = parseFloat(operands[0]);
+                b = parseFloat(operands[1]);
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id='outer'>
+            <div>
+                <input id="label" type="text" value=''>
+            </div>
+            <div>
+                <button onclick="buttonClick(1)">1</button>
+                <button onclick="buttonClick(2)">2</button>
+                <button onclick="buttonClick(3)">3</button>
+                <button onclick="buttonOperation(' + ')">+</button>
+            </div>
+            <div>
+                <button onclick="buttonClick(4)">4</button>
+                <button onclick="buttonClick(5)">5</button>
+                <button onclick="buttonClick(6)">6</button>
+                <button onclick="buttonOperation(' - ')">-</button>
+            </div>
+            <div>
+                <button onclick="buttonClick(7)">7</button>
+                <button onclick="buttonClick(8)">8</button>
+                <button onclick="buttonClick(9)">9</button>
+                <button onclick="buttonOperation(' * ')">*</button>
+            </div>
+            <div>
+                <button onclick="buttonClear()">C</button>
+                <button onclick="buttonClick(0)">0</button>
+                <button onclick="buttonEqual()">=</button>
+                <button onclick="buttonOperation(' / ')">/</button>
+            </div>
+        </div>
+    </body>
+</html>
