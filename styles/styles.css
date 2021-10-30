@@ -1,0 +1,27 @@
+html {
+    font-size: calc(60% + 0.8vmin);
+}
+
+body {
+    background-image: url(../src/email-pattern.png);
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.doneWorks, .lections {
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.lections {
+    background-color: blanchedalmond;
+}
+
+.doneWorks {
+    background-color: cornsilk;
+}
