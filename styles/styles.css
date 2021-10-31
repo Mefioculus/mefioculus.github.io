@@ -22,11 +22,11 @@ body {
 .container {
     display: grid;
     grid-auto-flow: column;
-    gap: 10px;
+    gap:1rem;
 }
 
 .doneWorks, .lections, .links {
-    padding: 20px;
+    padding: 2rem;
     margin: 1rem;
     border-radius: 1rem;
     transition: background-color, 1s, padding, 1s;
@@ -34,9 +34,23 @@ body {
 }
 
 .lections:hover, .doneWorks:hover, .links:hover {
-    background-color: burlywood;
+    background-color: rgb(156, 169, 243);
     padding-left: 6rem;
     padding-right: 6rem;
+}
+
+.homework {
+    padding: 2rem;
+    margin: 1rem;
+    transition: padding, 1s, background-color, 1s;
+    border-radius: 1rem;
+
+}
+
+.homework:hover {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: rgb(156, 169, 243);
 }
 
 .linkContainer {
