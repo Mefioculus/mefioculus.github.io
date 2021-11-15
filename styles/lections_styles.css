@@ -1,0 +1,55 @@
+html {
+    background-color: aliceblue;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animated {
+    transition: background-color 0.5s;
+}
+
+.animated:hover {
+    background-color: rgb(206, 227, 245);
+}
+
+h1, h2 {
+    padding: 8px;
+    border-radius: 6px;
+    font-family: 'Amatic SC', cursive;
+}
+
+p {
+    font-family: 'Bellota Text', cursive;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.picktogram {
+    height: 20px;
+    width: auto;
+}
+
+.linkContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
+}
+
+.menu {
+    position: fixed;
+    left: 5px;
+    top: 2px;
+    width: 200px;
+}
+
+.menu_links {
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+}
+
+.screenshots {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
